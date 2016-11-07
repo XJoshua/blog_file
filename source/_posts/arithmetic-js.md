@@ -113,6 +113,11 @@ tags: [javascript, arithmetic, methods]
       return [a,b];
     }
 ```
+> es6(so easy!)
+
+```
+[a, b] = [b, a]
+```
 
 ## 随机生成指定长度的字符串
 
@@ -134,8 +139,8 @@ function randomString(n) {
 
 ```
     function getMaxProfit(arr) {
-        let minValue = Math.min.apply(arr[0], arr);
-        let maxValue = Math.max.apply(arr[0], arr);
+        let minValue = Math.min(...arr);
+        let maxValue = Math.max(...arr);
         return maxValue - minValue;
     }
 ```

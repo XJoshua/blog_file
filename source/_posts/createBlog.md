@@ -68,7 +68,7 @@ And then, execute next:
 如果想切换主题风格,点击[hexo主题库](https://github.com/hexojs/hexo/wiki/Themes)自由地切换吧,安装新的主题到`themes`文件夹下,然后要对该主题下的`_config.yml`文件进行配置<i class="icon-alarm"></i>(不是
 项目根目录下的`_config.yml`,它也需要配置,但有别的用处)
 
-##部署到github(默认你已经有账号)
+## 部署到github(默认你已经有账号)
 
 在自己的账户下创建一个仓库，命名为 `username.github.io` ，注意：这个仓库名称是固定的，将`username`替换成你的github用户名。然后修改博客根目录下的配置文件`_config.ylm`:
 
@@ -92,7 +92,11 @@ deploy:
 
 部署成功,赶紧浏览器输入username.github.io查看自己的博客吧!项目根目录下的`_config.yml`配置详情,点击[_config.yml](https://hexo.io/docs/configuration.html)
 
-当然也可以点击[博主]()查看我的博客配置文件
+当然也可以点击[博主](https://github.com/barefootChild/blog_file)查看我的博客配置文件,感觉可以就点个star吧!
+
+# 通篇博文看下来,或许你会感觉博主很懒,什么配置啊,安装啊都连接到其它处!
+
+ 没错,具体配置什么的,要自己去官网看,官方文档写得很仔细,也是最权威的地方,每个人看都希望追求个性,还望大家,自己查阅,按照自己的喜好配置,博主只是提供路径!
 
 
 
