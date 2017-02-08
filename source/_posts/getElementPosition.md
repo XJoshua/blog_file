@@ -48,7 +48,7 @@ tags: [javascript,elementPosition]
 ## 三、获取网页的绝对位置：
   每个元素都有offsetTop和offsetLeft属性，表示该元素的左上角与父容器（offsetParent）左上角的距离；
   所以，只要对这两个元素进行迭代就可以得到该元素的绝对坐标；
-  ```ecmascript 6
+  ```javascript
         function getElementLeft(ele) {
             let actualLeft = ele.offsetLeft;
             let current = ele.offsetParent;
@@ -75,7 +75,7 @@ tags: [javascript,elementPosition]
   ```
 ## 四、获取网页元素的相对位置：
   获取到绝对位置后，获取相对位置就很容易了，减去界面滚动条滚动的距离就可以了：
-  ```ecmascript 6
+  ```javascript
         function getElementViewLeft(ele) {
             let actualLeft = ele.offsetLeft;
             let current = ele.offsetParent;
