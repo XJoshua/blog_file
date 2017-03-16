@@ -22,6 +22,8 @@ tags: [react, component, lifecycle]
     Updating更新阶段，在组件接收新props时调用，初始渲染不调用此方法，旧的props可以使用this.props查看，新的prop使用nextProps查看，在此函数中调用
     this.setState()不会触发附加的渲染；
     
+<!--more-->
+
 4. shouldComponentUpdate(nextProps, nextState){}
 
     Updating更新阶段，当正在接收新的状态时，在渲染之前调用；此方法必须返回false或者true，否则报错，true则渲染，false则不渲染；在此生命周期中考虑是否进行渲染，避免不必要的性能浪费；
