@@ -3,14 +3,14 @@ title: prototype && __proto__
 date: 2017-04-07 17:30:26
 tags:
 ---
-##概念
+## 概念
 
 1. prototype是函数(function)的一个属性，他指向函数的原型；
 2. __proto__是对象内部的一个属性，他只想构造器的原型，对象依赖他进行原型链查询；
 
 所以，prototype只有函数才有，其他对象(非函数)不具有该属性，而__proto__是对象的内部属性，任何对象都拥有该属性；
 
-###上个栗子吧
+### 上个栗子吧
 
 ```javascript
     function Person(name) {
@@ -34,7 +34,7 @@ p1是非函数对象，自然就没有prototype属性；
 
 对象的原型链查询时正是通过这个属性(__proto__)链接到构造器的原型，从而实现查询的层层深入；
 
-###__proto__
+### __proto__
 
 Person.__proto__指向的是一个空函数，但是这个空函数究竟是什么：
 ```javascript
@@ -61,7 +61,7 @@ javascript中内置构造器/对象共计13个，上面是可直接访问的9个
     console.log(JSON.__proto__ === Object.prototype);  // true
 ```
 
-###Function.prototype
+### Function.prototype
 ```javascript
     console.log(typeof Function.prototype)//function
 ```
@@ -76,14 +76,15 @@ Function.prototype是唯一一个prototype的类型为function的prototype,其�
    console.log(typeof Error.prototype)    // object
    console.log(typeof Date.prototype)     // object 
 ```
+<!--more-->
 
-###JS函数是一等公民
+### JS函数是一等公民
 ```javascript
     console.log(Function.Prototype.__proto__ === Object.prototype)//true
 ```
 所以，所有的构造器既是函数又是普通JS对象，可以给构造器添加删除属性；同时他也继承了Object.prototype上的所有方法：toString、valueOf、hasOwnProperty等；
 
-###Object.prototype
+### Object.prototype
 
 Person.__proto__ -> Function.prototype;
 Function.prototype.__proto__ -> Object.prototype;
