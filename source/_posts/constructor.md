@@ -20,7 +20,7 @@ tags: [constructor, prototype, this, javascript]
 3. 将构造函数的this指向该中间对象,并执行构造函数内部的代码；
 4. 返回该中间对象，即返回实例对象；
 
-    这四句话该如何用代码表示呢？
+   这四句话该如何用代码表示呢？
 <!--more-->
 ```javascript
    //首先创建一个构造函数
