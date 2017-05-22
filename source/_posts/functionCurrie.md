@@ -26,7 +26,7 @@ tags: [javascript, function, currie, arguments]
   
 ## 如何对函数进行柯里化？(涉及知识：闭包，高阶函数，不完全函数等)
 
-* ### 开胃菜
+* ### 蠢萌皮卡丘
   ```javascript
      function printInfo(name, song) {
         console.log(name + '最喜欢的歌曲是：' + song);
@@ -41,7 +41,7 @@ tags: [javascript, function, currie, arguments]
      curryingPrintInfo('Tom')('七里香');
      curryingPrintInfo('Jerry')('雅俗共赏');
   ```
-* ### 小鸡炖蘑菇
+* ### 皮卡丘进化
   上面虽然实现了函数柯里化，但是当我们需要柯里化的时候，都要像上面那样不断地进行函数嵌套，那就是噩梦；所以下面就提供一个帮助其他函数进行柯里化的函数；
   ```javascript
      // 高阶函数
@@ -64,7 +64,7 @@ tags: [javascript, function, currie, arguments]
   ```
 <!--more-->
 
-* ### 牛肉火锅
+* ### 皮卡丘超级进化
   上面的函数柯里化基本能满足我们的一般性需求了，但是如果我们希望那些经过柯里化的函数可以每次只传递一个参数，然后可以进行多次参数的传递，该怎么办呢？
   ```javascript
      function betterCurryingHelper(fn, len) {
@@ -88,7 +88,7 @@ tags: [javascript, function, currie, arguments]
      betterCurryingHelper(showMsg)('zys', 22)('apple');
      betterCurryingHelper(showMsg)('zys')(22, 'apple');
   ```
-* ### 泡椒凤爪
+* ### 皮卡丘究极进化（让人炸毛）
   最刺激的柯里化函数莫过于传参时不按照顺序了：
   ```javascript
      var _ = {};
