@@ -11,7 +11,6 @@ tags: [Ajax, javascript, front-end]
       var xhr = new XMLHttpRequest();
    ```
    * IE浏览器通过XMLHttpRequest或者ActiveXObject对象实现ajax功能；
-   所以，为了迎合各大浏览器刁钻的口味，我们不得不提供兼容的方法：
    ```javascript
       function getXHR() {
           var xhr;
@@ -30,7 +29,8 @@ tags: [Ajax, javascript, front-end]
           }
           return xhr;
       }
-   ``` 
+   ```
+   所以，为了迎合各大浏览器刁钻的口味，我们不得不提供兼容的方法; 
 <!--more-->
    
 ## ajax有没有破坏js单线程机制
