@@ -13,23 +13,10 @@ tags: [Ajax, javascript, front-end]
    * IE浏览器通过XMLHttpRequest或者ActiveXObject对象实现ajax功能；
    所以，为了迎合各大浏览器刁钻的口味，我们不得不提供兼容的方法：
    ```javascript
-          function getXHR() {
-            var xhr = null;
-            if (window.XMLHttpRequest) {
-                xhr = new XMLHttpRequest();
-            } else if (window.ActiveXObject) {
-                try {
-                    xhr = new ActiveXObject("Msxml2.XMLHTTP");
-                } catch (e) {
-                    try {
-                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
-                    } catch (e) {
-                        alert('您的浏览器暂时不支持Ajax！');
-                    }
-                }
-            }
-            return xhr;
-          }
+      function getXHR() {
+        var xhr = null;
+        return xhr;
+      }
    ``` 
 <!--more-->
    
