@@ -13,24 +13,25 @@ tags: [Ajax, javascript, front-end]
    * IE浏览器通过XMLHttpRequest或者ActiveXObject对象实现ajax功能；
    所以，为了迎合各大浏览器刁钻的口味，我们不得不提供兼容的方法：
    ```javascript
-      function getXHR() {
-        var xhr = null;
-        if (window.XMLHttpRequest) {
-            xhr = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            try {
-                xhr = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
+          function getXHR() {
+            var xhr = null;
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
                 try {
-                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    xhr = new ActiveXObject("Msxml2.XMLHTTP");
                 } catch (e) {
-                    alert('您的浏览器暂时不支持Ajax！');
+                    try {
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        alert('您的浏览器暂时不支持Ajax！');
+                    }
                 }
             }
-        }
-        return xhr;
-      }
+            return xhr;
+          }
    ``` 
+<!--more-->
    
 ## ajax有没有破坏js单线程机制
 
@@ -42,8 +43,6 @@ tags: [Ajax, javascript, front-end]
    这么多线程，他们是如何同js引擎线程交互的呢？
    通常，线程之间交互以事件的方式发生，通过事件回调的方式予以通知，事件回调又是以先进先出的方式添加到任务队列末尾的，等js引擎空闲时，任务队列中排队的
 任务将会依次被执行。这些事件回调包括setTimeout,setInterval,click,ajax异步请求等回调。
-
-<!--more-->
 
 ### 浏览器中，js引擎线程会循环从任务队列中读取事件并执行，这种运行机制称为Event Loop（事件循环）
    
