@@ -5,7 +5,7 @@ tags: [Ajax, javascript, front-end]
 ---
 ## 前后端分离的基石Ajax
 
-   现代浏览器几乎都支持ajax，但是实现的技术分为两种：
+   现代浏览器几乎都支持ajax，但是实现的技术分为两种：[原文地址](http://louiszhai.github.io/2016/11/02/ajax)
    * 标准浏览器通过XMLHttpRequest对象实现了ajax功能，创建一个用于发送ajax请求的对象只需要一条语句：
    ```javascript
       var xhr = new XMLHttpRequest();
