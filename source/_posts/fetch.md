@@ -6,7 +6,7 @@ tags: [javascript, fetch, request, front-end]
 ## fetch
 
    fetch是web异步通信的未来，但是目前部分浏览器对它还不太支持，其中chrome42-45，对中文支持有问题，建议从chrome46起使用fetch；对于IE8+浏览器，建议
-依次安装下列垫片：
+依次安装下列垫片：[原文地址](http://louiszhai.github.io/2016/11/02/fetch)
 
 * es5的polyfill － es5-shim，es5-sham.
 * Promise的polyfill - es6-promise.
