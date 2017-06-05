@@ -33,6 +33,7 @@ tags: [Javascript, Regex]
       }
       console.log(getParamName('name'));
    ```
+<!--more-->
    
 ### 数字格式化问题， 1234567890 --> 1,234,567,890
    
