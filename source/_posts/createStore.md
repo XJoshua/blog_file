@@ -22,7 +22,7 @@ tags: [React, Redux]
 
 * 实际应用中要通过createStore函数生成一个Store，那这个函数到底做了什么呢？阮一峰老师解释的很清晰，我这边搬来做一下笔记：
 
-  ```javascript
+  ```ecmascript 6
      const createStore = function(reducer){
      var state;
      var listeners = [];
