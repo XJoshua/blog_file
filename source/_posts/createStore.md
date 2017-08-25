@@ -1,7 +1,7 @@
 ---
 title: createStore
 date: 2017-08-24 17:32:25
-tags: [React, Redux]
+tags: [React]
 ---
 
 # What is Store
@@ -12,28 +12,26 @@ tags: [React, Redux]
 * Store通过Reducer在接收到一个Action后，更新相应的公用数据；
 * 数据更新后，对应的View也要做相应的更新，Store.subscribe(listener)设置监听函数，一旦数据变化,就自动执行这个函数,所以只要将View的
   更新函数放入listener，就会实现View层的自动渲染；
-* store.subscribe()返回一个函数，执行此函数就可以解除监听：
-
+* store.subscribe()返回一个函数，执行此函数就可以解除监听:
   ```javascript
      var unsubscribe = store.subscribe();
      unsubscribe();
-  ``` 
+  ```
 # What is createStore doing?
 
-* 实际应用中要通过createStore函数生成一个Store，那这个函数到底做了什么呢？阮一峰老师解释的很清晰，我这边搬来做一下笔记：
-
-  ```ecmascript 6
+* 实际应用中要通过createStore函数生成一个Store，那这个函数到底做了什么呢？阮一峰老师解释的很清晰，我这边搬来做一下笔记:
+  ```javascript
      const createStore = function(reducer){
-     var state;
-     var listeners = [];
+     let state;
+     let listeners = [];
       
-     const getState = function(){return state};
-     const dispatch = function(action){
+     const getState = () => state;
+     const dispatch = (action) => {
        state = reducer(state, action);
        listeners.forEach(listener => listener());
      };
       
-     const subscribe = function(listener){
+     const subscribe = (listener) => {
        listeners.push(listener);
        return () => {
          listeners = listeners.filter(l => l !== listener);
@@ -42,7 +40,7 @@ tags: [React, Redux]
       
      dispatch({});
       
-     return { getState, dispatch, subscribe };
+     return {getState,dispatch,subscribe};
     }
   ```
     
