@@ -1,7 +1,7 @@
 ---
 title: createStore
 date: 2017-08-24 17:32:25
-tags: [React]
+tags: [React, Redux]
 ---
 
 # What is Store
