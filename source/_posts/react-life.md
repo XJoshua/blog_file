@@ -19,7 +19,7 @@ tags: [react, component, lifecycle]
 
   Mounting安装阶段，只在客户端调用一次，在初始渲染发生后立即执行；
     
-* componentWillReciveProps(nexProps){}
+* componentWillReceiveProps(nexProps){}
 
   Updating更新阶段，在组件接收新props时调用，初始渲染不调用此方法，旧的props可以使用this.props查看，新的prop使用nextProps查看，在此函数中调用
 this.setState()不会触发附加的渲染；
