@@ -10,7 +10,7 @@ tags: [vue, javascript, MVVM, reactive]
 是一个观察者，在数据变更的时候通知订阅者更新视图。
 
 ## vue如何将实例配置项设置为可观察的？
-   ```ecmascript 6
+   ```javascript
       function observer(obj, cb) {
         Object.keys(obj).forEach((key) => {
           defineReactive(obj, key, config, cb)
@@ -53,7 +53,7 @@ tags: [vue, javascript, MVVM, reactive]
    
 ## Proxy
    在vue的构造函数Constructor中为data执行一个代理函数，就可以把data对象上的属性代理到vue实例上：
-   ```ecmascript 6
+   ```javascript
       function _proxy(data) {
         const that = this;
         Object.keys(data).forEach(key => {
