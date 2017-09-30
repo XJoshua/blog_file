@@ -5,9 +5,9 @@ tags: [vue, javascript, MVVM, reactive]
 ---
 
 # 响应式原理
-  何为响应式？对于前端MVVM来说，修改数据相应的视图更新即为响应式。接触Vue时，尤大大在文档中说过，vue的响应式原理依赖于Object.defineProperty,
-这也是vue不支持IE8及更低版本浏览器的原因。vue通过设定对象属性的setter／getter方法来监听数据的变化，通过getter进行依赖收集，每个setter方法就
-是一个观察者，在数据变更的时候通知订阅者更新视图。
+  何为响应式？对于前端MVVM来说，修改数据相应的视图更新即为响应式。接触Vue时，尤大大在文档中说过，vue的响应式原理依赖于Object.defineProperty,这也是vue不支持IE8及更低版本浏览器的原因。vue通过设定对象属性的setter／getter方法来监听数据的变化，通过getter进行依赖收集，每个setter方法就是一个观察者，在数据变更的时候通知订阅者更新视图。
+
+<!--more-->
 
 ## vue如何将实例配置项设置为可观察的？
    ```javascript
