@@ -96,6 +96,10 @@ git tag [tag]
 git tag [tag] [commit]
 * 删除本地tag
 git tag -d [tag]
+* 提交指定tag
+git push [remote] [tag]
+* 提交所有tag
+git push [remote] --tags
 * 新建一个分支，指向某个tag
 git checkout -b [branch-name] [tag]
 
