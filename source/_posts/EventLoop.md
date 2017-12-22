@@ -46,4 +46,4 @@ Node.js也是单线程的，但是它的机制和浏览器不一样，如下图�
 2. 解析后的代码调用Node API；
 3. [libuv](https://github.com/libuv/libuv)库负责Node API的执行，它将不同的任务分给不同的线程，形成一个Event Loop，以异步的形式将执行结果返回给V8引擎；
 4. V8引擎再将结果返回给用户；
-除了setTimeout、setInterval，Node.js还提供了另外两个与任务队列有关的函数process.nextTick和setImmediate
+除了setTimeout、setInterval，Node.js还提供了另外两个与任务队列有关的函数process.nextTick和setImmediate,请自行了解；
