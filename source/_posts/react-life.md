@@ -11,6 +11,8 @@ tags: [react, component, lifecycle]
 <!--more-->
 
 ## 组件的各个生命周期
+先看一张图吧：
+![lifecycle](http://upload-images.jianshu.io/upload_images/1586207-e936d6ee7ae3ba55.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * componentWillMount(){}
 
   Mounting安装阶段，在客户端和服务器上，在初始渲染发生之前立即调用一次，在这个方法中可以调用setState，render()函数将会渲染最新的的状态，但是只会执行一次；

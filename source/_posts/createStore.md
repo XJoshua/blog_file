@@ -15,7 +15,8 @@ tags: [React, Redux]
   ```javascript
      var unsubscribe = store.subscribe();
      unsubscribe();
-  ```  
+  ```
+  
 <!--more-->
 
 # What is createStore doing?

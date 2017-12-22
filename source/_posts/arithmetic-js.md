@@ -144,3 +144,10 @@ function randomString(n) {
         return maxValue - minValue;
     }
 ```
+## 准确判断js数据类型
+```
+    var type = function(o) {
+        var s = Object.prototype.toString.call(o);
+        return s.match(/\[object (.*?)\]/)[1].toLowerCase();
+    }
+```
