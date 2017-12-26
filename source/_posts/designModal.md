@@ -8,7 +8,7 @@ tags: [javascript, 设计模式]
 
   简单工厂设计模式的使用场景就是用来创建一些相似的对象;
 
-  ```
+  ```javascript
   function createBook(name, time, type) {
     var o = new Object();
     o.name = name;
@@ -87,7 +87,7 @@ tags: [javascript, 设计模式]
         var div = document.createElement('div');
         div.innerHTML = content;
         div.style.border = '1px solid red';
-        document.getElementById('app').appendChild(div);
+        document.body.appendChild(div);
       })(content);
     }
   };
